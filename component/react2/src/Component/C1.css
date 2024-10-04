@@ -1,0 +1,30 @@
+.a1{
+    color: aqua;
+    font-size: 20px;
+    margin: 0px 20px;
+    transition: all 0.2s ease-in 0.3s;
+}
+.a1:hover{
+    color: red;
+    font-size: 22px;
+}
+.nav{
+    background-color: cadetblue;
+    border: 2px solid rosybrown;
+    border-radius: 25px;
+}
+.container{
+    background-color: cornflowerblue;
+    width:auto;
+    height: auto;
+    border-radius: 25px;
+}
+.container h2{
+    color: burlywood;
+
+}
+.container img{
+    border-radius: 25px;
+    height: 500px;
+    width: 450px;
+}
