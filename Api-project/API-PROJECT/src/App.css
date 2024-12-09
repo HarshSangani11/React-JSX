@@ -1,0 +1,117 @@
+.btn {
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #0056b3, #004085);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-content p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-content p:last-child {
+  margin-top: auto;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.card-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card-buttons button:first-child {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.card-buttons button:first-child:hover {
+  background-color: #e63946;
+}
+
+.card-buttons button:last-child {
+  background-color: #ffd166;
+  color: black;
+}
+
+.card-buttons button:last-child:hover {
+  background-color: #f4a261;
+}
