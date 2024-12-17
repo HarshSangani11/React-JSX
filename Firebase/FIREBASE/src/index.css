@@ -1,0 +1,155 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fef6e4; /* Soft cream background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main Container */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 90%; /* Responsive width */
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Headings */
+h2 {
+  /* font-size: 1rem; */
+  color: #f55c47; /* Vibrant coral red */
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Sub-container styling (e.g., forms, divs) */
+.div {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #d4a5a5; /* Muted pink border */
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #f55c47;
+  outline: none;
+  box-shadow: 0 0 4px rgba(245, 92, 71, 0.4);
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #457b9d; /* Calm blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1d3557; /* Darker blue */
+}
+
+/* Links */
+a {
+  color: #457b9d;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #1d3557;
+}
+
+/* Text Elements */
+span {
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #6d6875; /* Soft purple-gray */
+}
+
+p {
+  font-size: 1rem;
+  color: #6d6875;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Lists */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #495057; /* Neutral gray */
+}
+
+ul li strong {
+  font-weight: bold;
+}
+
+/* Loading State */
+.loading {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
