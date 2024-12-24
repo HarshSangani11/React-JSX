@@ -85,6 +85,10 @@ export default function Dashboard() {
           <h2>Welcome to the Dashboard!</h2>
           <ul className="user-info">
             <li>
+              <img width={50} height={50} style={{borderRadius:"50%",margin:"auto"}} src={userData.url} alt="" />
+            </li>
+            <br />
+            <li>
               <strong>Name:</strong> {userData.name}
             </li>
             <li>

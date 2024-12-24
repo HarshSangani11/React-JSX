@@ -1,8 +1,8 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import React from 'react'
 import { useState } from 'react'
-import { auth, db } from '../../firebaseConfig';
-import { Link, useNavigate } from 'react-router-dom';
+import { auth, db, provider } from '../../firebaseConfig';
+import { data, Link, useNavigate } from 'react-router-dom';
 import { doc, setDoc } from 'firebase/firestore';
 
 export default function Singup() {
@@ -10,16 +10,25 @@ export default function Singup() {
   const [city, setCity] = useState();
   const [age, setAge] = useState();
   const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+
+    const [password, setPassword] = useState();
   const navigate = useNavigate()
   const handleSingUp = async () => {
     let user = await createUserWithEmailAndPassword(auth, email, password)
       .then((data) => {
-        setDoc(doc(db, "Users", data.user.uid), { name, city, age, email })
+        setDoc(doc(db, "Users", data.user.uid), { name, city, age, email,url:"/user.jpg" })
         console.log(data)
         navigate("/dashboard")
       }
       )
+  }
+  const handleGoogle = async () => {
+    await signInWithPopup(auth, provider)
+      .then((data) => {
+        setDoc(doc(db, "Users", data.user.uid), { name: data.user.displayName, email: data.user.email, url: data.user.photoURL })
+        navigate("/dashboard")
+        console.log(data)
+      })
   }
   return (
     <div>
@@ -31,6 +40,7 @@ export default function Singup() {
         <input type="email" placeholder='Enter Email' onChange={(e) => setEmail(e.target.value)} />
         <input type="text" placeholder='Enter Password' onChange={(e) => setPassword(e.target.value)} />
         <button onClick={handleSingUp}>Sing Up</button>
+        <button onClick={handleGoogle}>SingIn with Google</button>
         <span>
           <Link to={"/login"}>SingIn</Link>
 
