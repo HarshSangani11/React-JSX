@@ -16,7 +16,7 @@ export default function Singup() {
   const handleSingUp = async () => {
     let user = await createUserWithEmailAndPassword(auth, email, password)
       .then((data) => {
-        setDoc(doc(db, "Users", data.user.uid), { name, city, age, email,url:"/user.jpg" })
+        setDoc(doc(db, "Users", data.user.uid), { name, city, age, email,url:"/user.png" })
         console.log(data)
         navigate("/dashboard")
       }
